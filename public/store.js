@@ -26,7 +26,7 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 //using stripe when purchase button is clicked
-var stripeHandler=stripeCheckout.configure({
+var stripeHandler=StripeCheckout.configure({
 key: stripePublickey,
 locale:'en',
 token:function(token){
@@ -72,7 +72,7 @@ token:function(token){
 
 }
 
-})
+});
 function purchaseClicked() {
   // alert('Thank you for your purchase')
     //var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -85,7 +85,9 @@ function purchaseClicked() {
     stripeHandler.open({
         amount:price
 
+
     })
+    
     
 }
 
@@ -109,9 +111,14 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-   var id=shopItem.dataset.itemId
+    var id=shopItem.dataset.itemId
     addItemToCart(title, price, imageSrc,id)
     updateCartTotal()
+    if (event.target=event) {
+        alert('item added to cart successfull')
+        return
+    }
+    //alert('item added to cart successfull')
 }
 
 function addItemToCart(title, price, imageSrc,id) {

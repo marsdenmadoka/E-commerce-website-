@@ -7,14 +7,19 @@
         <script> 
         var stripePublickey='<%= stripePublickey %>'    
         </script> <!--setting stripe public key-->
-        <script src="https://checkout.stripe.com/checkout.js" defer></script> <!--intergrating stripes in our application in order to get script API-->
+
+       <script src="https://js.stripe.com/v3/"></script>
+
+       <!-- <script src="https://checkout.stripe.com/checkout.js" defer></script>intergrating stripes in our application in order to get script API-->
         <script src="store.js" async></script>
     </head>
     <body>
+    
+
         <header class="main-header">
             <nav class="main-nav nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="/store">STORE</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                 </ul>

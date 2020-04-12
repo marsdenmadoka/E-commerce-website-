@@ -42,6 +42,59 @@
             "imgName":"Cofee.png"
             }
 
+],
+"TOURS":[
+{
+    "id":6,
+    "date":"JUL 16",
+    "city":"los angels",
+    "price":1999,
+    "arena":"uhuru park"
+
+},
+{
+    "id":7,
+    "date":"JUL 19",
+    "city":"washington dc",
+    "price":1999,
+    "arena":"watford stadium"
+
+},
+{
+    "id":8,
+    "date":"JUL 22",
+    "city":"nairobi",
+    "price":1999,
+    "arena":"uhuru gardens"
+
+},
+{
+    "id":9,
+    "date":"JUL 29",
+    "city":"mombasa",
+    "price":1999,
+    "arena":"mamangina drive"
+
+},
+{
+    "id":10,
+    "date":"AUG 2",
+    "city":"voi",
+    "price":1999,
+    "arena":"wundanyi stadium "
+
+},
+{
+    "id":11,
+    "date":"AUG 12",
+    "city":"kakamega",
+    "price":1999,
+    "arena":"muliro gardens"
+
+}
+
+
+
 ]
 
 
