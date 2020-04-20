@@ -4,10 +4,25 @@
         <title>The Generics</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="styles.css" />
-
-         
              <script src="index.js"></script>
+
+             <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                    border: 1px solid #dee2e6;
+                    white-space: nowrap; /* to prevent text wrapping */
+                }
+                .responsive-table {
+                    overflow-x: auto;
+                }
+            </style>
     </head>
+    
     <body>
         <header class="main-header">
             <nav class="nav main-nav">
@@ -59,6 +74,34 @@
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
 
+       
+        <div class="responsive-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>Arena</th>
+                        <th>Price</th>
+                        
+                    </tr>
+                </thead>
+                <% items.TOURS.forEach(function(item){ %>
+                <tbody>
+                    <tr>
+                        <td><%=item.id%></td>
+                        <td><%=item.date%></td>
+                        <td><%=item.city%></td>
+                        <td><%=item.arena%></td>
+                        <td>$<%=item.price%></td>
+                       
+                    </tr>
+                </tbody>
+                <%})%>
+            </table>
+        </div>
+        
         <footer class="main-footer">
             <div class="container main-footer-container">
                 <h3 class="band-name">The Generics</h3>
