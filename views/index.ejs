@@ -53,7 +53,6 @@
                 </div>
                 </div>
                 <%})%>
-            
             </div>
         </section>
 
@@ -79,22 +78,24 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                    
                         <th>Date</th>
                         <th>City</th>
                         <th>Arena</th>
                         <th>Price</th>
+                        
                         
                     </tr>
                 </thead>
                 <% items.TOURS.forEach(function(item){ %>
                 <tbody>
                     <tr>
-                        <td><%=item.id%></td>
+                    
                         <td><%=item.date%></td>
                         <td><%=item.city%></td>
                         <td><%=item.arena%></td>
                         <td>$<%=item.price%></td>
+    
                        
                     </tr>
                 </tbody>
