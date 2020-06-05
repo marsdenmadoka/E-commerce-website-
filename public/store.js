@@ -130,7 +130,7 @@ function addItemToCart(title, price, imageSrc,id) {
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added to the cart')
-            return
+            finish();
         }
     }
     var cartRowContents = `

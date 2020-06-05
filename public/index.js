@@ -29,13 +29,6 @@ function ready() {
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
-
-//using daraja API for purchase
-
-
-
-//end of daraja API
-
 //using stripe when purchase button is clicked
 /*var stripeHandler=StripeCheckout.configure({
     key: stripePublickey,
@@ -88,7 +81,7 @@ function ready() {
     function purchaseClicked() {
         var priceElement=document.getElementsByClassName('cart-total-price')[0]
         var price=parseFloat(priceElement.innerText.replace('$',''))*100
-        fetch('/stk',{
+        fetch('/purchase',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -107,12 +100,9 @@ function ready() {
         //stripeHandler.open
         //({
          //  amount:price
-    
-    
-     )
-        
-        
-    }
+    )
+        }
+
     function removeCartItem(event) {
         var buttonClicked = event.target
         buttonClicked.parentElement.parentElement.remove()
@@ -149,7 +139,7 @@ function ready() {
         for (var i = 0; i < cartItemNames.length; i++) {
             if (cartItemNames[i].innerText == city) {
                 alert('This item is already added to the cart')
-                return
+                finish();
             }
         }
         var cartRowContents = `
